@@ -1,0 +1,21 @@
+# Python-Umgebung
+.venv/
+__pycache__/
+*.pyc
+
+# Modellgewichte (laden sich beim ersten Lauf automatisch)
+*.pt
+
+# Bilder, Konturen und ASCII-Ausgaben (lokal, nicht im Repo)
+eingabe/
+konturen/
+ascii/
+*.png
+*.jpg
+*.jpeg
+*.avif
+*.txt
+
+# System / Tooling
+.DS_Store
+.claude/
