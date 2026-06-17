@@ -16,9 +16,10 @@ ascii/
 *.avif
 *.txt
 
-# Beispielbild fürs README (Ausnahme von den Regeln oben)
+# Beispielbilder fürs README (Ausnahme von den Regeln oben)
 !beispiel/
 !beispiel/*.png
+!beispiel/*.jpg
 
 # System / Tooling
 .DS_Store
