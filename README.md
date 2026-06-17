@@ -1,7 +1,15 @@
 # ren-ascii-sance
 
+![Lint](https://github.com/Tsuskov/ren-ascii-sance/actions/workflows/lint.yml/badge.svg)
+![Last commit](https://img.shields.io/github/last-commit/Tsuskov/ren-ascii-sance)
+![Top language](https://img.shields.io/github/languages/top/Tsuskov/ren-ascii-sance)
+![Repo size](https://img.shields.io/github/repo-size/Tsuskov/ren-ascii-sance)
+![License](https://img.shields.io/github/license/Tsuskov/ren-ascii-sance)
+
 Figuren in Bildern (z. B. Renaissance-Gemälden) erkennen, als Konturlinien
 rendern und in farbige Block-ASCII-Art umwandeln.
+
+**Schnellstart:** `pip install -r requirements.txt && python konturen.py bild.jpg && python ascii_art.py konturen.png`
 
 Die Pipeline besteht aus zwei Schritten:
 

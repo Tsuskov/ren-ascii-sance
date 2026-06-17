@@ -1,0 +1,7 @@
+# Getestete Versionen
+ultralytics==8.4.69
+opencv-python==4.13.0.92
+numpy==2.4.6
+pillow==12.2.0
+torch==2.12.0
+torchvision==0.27.0

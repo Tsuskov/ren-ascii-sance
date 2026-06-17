@@ -15,6 +15,7 @@ ascii/
 *.jpeg
 *.avif
 *.txt
+!requirements.txt
 
 # Beispielbilder fürs README (Ausnahme von den Regeln oben)
 !beispiel/
