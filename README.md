@@ -13,6 +13,13 @@ Die Pipeline besteht aus zwei Schritten:
    jede geschlossene Fläche mit einer poppigen Farbe. Ausgabe als Textdatei und
    als gerendertes PNG (echte Monospace-Schrift via Pillow).
 
+## Beispiel
+
+Paolo Veronese – *Die Hochzeit zu Kana* (171 erkannte Figuren), als farbige
+Block-ASCII-Art:
+
+![Veronese – Die Hochzeit zu Kana als farbige Block-ASCII-Art](beispiel/veronese_hochzeit_kana.png)
+
 ## Installation
 
 ```bash
