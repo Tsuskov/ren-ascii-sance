@@ -1,10 +1,8 @@
 # ren-ascii-sance
 
-![Lint](https://github.com/Tsuskov/ren-ascii-sance/actions/workflows/lint.yml/badge.svg)
-![Last commit](https://img.shields.io/github/last-commit/Tsuskov/ren-ascii-sance)
-![Top language](https://img.shields.io/github/languages/top/Tsuskov/ren-ascii-sance)
-![Repo size](https://img.shields.io/github/repo-size/Tsuskov/ren-ascii-sance)
-![License](https://img.shields.io/github/license/Tsuskov/ren-ascii-sance)
+[![Lint](https://img.shields.io/github/actions/workflow/status/Tsuskov/ren-ascii-sance/lint.yml?style=flat-square&logo=github&label=lint)](https://github.com/Tsuskov/ren-ascii-sance/actions/workflows/lint.yml)
+[![Python](https://img.shields.io/badge/python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
+[![License](https://img.shields.io/github/license/Tsuskov/ren-ascii-sance?style=flat-square&color=7c4dff)](LICENSE)
 
 Figuren in Bildern (z. B. Renaissance-Gemälden) erkennen, als Konturlinien
 rendern und in farbige Block-ASCII-Art umwandeln.
