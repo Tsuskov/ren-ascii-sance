@@ -15,16 +15,6 @@ Die Pipeline besteht aus zwei Schritten:
 
 ## Beispiel
 
-Paolo Veronese – *Die Hochzeit zu Kana* (171 erkannte Figuren).
-
-Original (Wikimedia Commons, gemeinfrei):
-
-![Veronese – Die Hochzeit zu Kana, Original](beispiel/veronese_hochzeit_kana_original.jpg)
-
-Als farbige Block-ASCII-Art:
-
-![Veronese – Die Hochzeit zu Kana als farbige Block-ASCII-Art](beispiel/veronese_hochzeit_kana.png)
-
 Raffael – *Die Schule von Athen* (81 erkannte Figuren).
 
 Original (Wikimedia Commons, gemeinfrei):
