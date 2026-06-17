@@ -25,6 +25,16 @@ Als farbige Block-ASCII-Art:
 
 ![Veronese – Die Hochzeit zu Kana als farbige Block-ASCII-Art](beispiel/veronese_hochzeit_kana.png)
 
+Raffael – *Die Schule von Athen* (81 erkannte Figuren).
+
+Original (Wikimedia Commons, gemeinfrei):
+
+![Raffael – Die Schule von Athen, Original](beispiel/schule_von_athen_original.jpg)
+
+Als farbige Block-ASCII-Art:
+
+![Raffael – Die Schule von Athen als farbige Block-ASCII-Art](beispiel/schule_von_athen.png)
+
 ## Installation
 
 ```bash
