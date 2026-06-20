@@ -33,6 +33,7 @@ def polygon_glaetten(punkte, fenster=5):
 def konturen_rendern(
     bildpfad,
     ausgabepfad="konturen.png",
+    labelpfad="figuren.png",   # Label-Karte: Pixelwert = Figur-ID (0 = Hintergrund)
     linienstaerke=2,
     mit_nummern=False,
     confidence=0.10,   # niedrig: gemalte Figuren als Person durchgehen lassen
@@ -58,12 +59,14 @@ def konturen_rendern(
         verbose=False,
     )[0]
 
-    # Leere schwarze Leinwand in Bildgröße
+    # Leere schwarze Leinwand in Bildgröße + Label-Karte für die Figur-IDs
     leinwand = np.zeros((hoehe, breite, 3), dtype=np.uint8)
+    labelkarte = np.zeros((hoehe, breite), dtype=np.uint8)
 
     if ergebnis.masks is None:
         print("Keine Figuren erkannt – conf senken oder imgsz erhöhen.")
         cv2.imwrite(ausgabepfad, leinwand)
+        cv2.imwrite(labelpfad, labelkarte)
         return
 
     weiss = (255, 255, 255)
