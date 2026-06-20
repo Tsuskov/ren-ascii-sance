@@ -78,6 +78,8 @@ def konturen_rendern(
             bitmaske = cv2.resize(bitmaske, (breite, hoehe),
                                   interpolation=cv2.INTER_NEAREST)
 
+        labelkarte[bitmaske > 0] = i % 256  # ganze Fläche trägt die Figur-ID
+
         # Jede zusammenhängende Komponente als eigene Kontur -> kein Quer-Verbinden
         konturen, _ = cv2.findContours(bitmaske, cv2.RETR_EXTERNAL,
                                        cv2.CHAIN_APPROX_SIMPLE)
@@ -96,7 +98,8 @@ def konturen_rendern(
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, weiss, 1, cv2.LINE_AA)
 
     cv2.imwrite(ausgabepfad, leinwand)
-    print(f"{len(masken)} Figuren erkannt -> {ausgabepfad}")
+    cv2.imwrite(labelpfad, labelkarte)
+    print(f"{len(masken)} Figuren erkannt -> {ausgabepfad}, {labelpfad}")
 
 
 if __name__ == "__main__":
