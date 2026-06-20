@@ -4,20 +4,22 @@
 [![Python](https://img.shields.io/badge/python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
 [![License](https://img.shields.io/github/license/Tsuskov/ren-ascii-sance?style=flat-square&color=7c4dff)](LICENSE)
 
-Figuren in Bildern (z. B. Renaissance-Gemälden) erkennen, als Konturlinien
-rendern und in farbige Block-ASCII-Art umwandeln.
+Figuren in Bildern (z. B. Renaissance-Gemälden) erkennen und das Original in
+farbige, schattierte Block-ASCII-Art umwandeln.
 
-**Schnellstart:** `pip install -r requirements.txt && python konturen.py bild.jpg && python ascii_art.py konturen.png`
+**Schnellstart:** `pip install -r requirements.txt && python konturen.py bild.jpg && python ascii_art.py bild.jpg`
 
 Die Pipeline besteht aus zwei Schritten:
 
-1. **`konturen.py`** – erkennt Personen per YOLO-Segmentierung und zeichnet nur
-   ihre Umrisse als weiße Linien auf schwarzem Hintergrund. Die Defaults sind
-   auf Gemälde abgestimmt (niedrige Confidence, hohe Auflösung, hohe IoU für
-   dicht überlappende Figuren).
-2. **`ascii_art.py`** – wandelt das Kontur-Bild in Block-ASCII (`█`) um und füllt
-   jede geschlossene Fläche mit einer poppigen Farbe. Ausgabe als Textdatei und
-   als gerendertes PNG (echte Monospace-Schrift via Pillow).
+1. **`konturen.py`** – erkennt Personen per YOLO-Segmentierung. Schreibt eine
+   Konturvorschau (`konturen.png`) und eine Label-Karte (`figuren.png`, ein
+   Pixelwert je Figur-ID). Die Defaults sind auf Gemälde abgestimmt (niedrige
+   Confidence, hohe Auflösung, hohe IoU für dicht überlappende Figuren).
+2. **`ascii_art.py`** – wandelt das **Originalbild** in Block-ASCII um. Die
+   Helligkeit steuert die Zeichendichte aus der Rampe ` ░▒▓█` (die Form), die
+   Label-Karte den Farbton je Figur (die Farbe); der Hintergrund bleibt grau
+   schattiert. Ausgabe als Textdatei und als gerendertes PNG (echte
+   Monospace-Schrift via Pillow).
 
 ## Beispiel
 
@@ -45,11 +47,12 @@ automatisch herunter – dafür wird einmalig Internet benötigt.
 ## Benutzung
 
 ```bash
-# 1) Bild -> Konturen
-python konturen.py pfad/zum/gemälde.jpg          # -> konturen.png
+# 1) Bild -> Figuren erkennen (Label-Karte)
+python konturen.py pfad/zum/gemälde.jpg          # -> konturen.png, figuren.png
 
-# 2) Konturen -> farbige ASCII-Art
-python ascii_art.py konturen.png                 # -> ascii.txt + ascii.png
+# 2) Original + Label-Karte -> farbige, schattierte ASCII-Art
+python ascii_art.py pfad/zum/gemälde.jpg         # -> ascii.txt + ascii.png
+#   (lädt figuren.png automatisch; fehlt sie, rein in Graustufen)
 ```
 
 ## Stellschrauben
@@ -63,7 +66,7 @@ python ascii_art.py konturen.png                 # -> ascii.txt + ascii.png
 `ascii_art.py`:
 - `breite_zeichen` – Detailgrad (Zeichen pro Zeile)
 - `schriftgroesse` – Blockgröße im PNG
-- `PALETTE` – die Füllfarben
+- `PALETTE` – die Farbtöne je Figur
 
 ## Hinweise
 
